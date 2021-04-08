@@ -1,3 +1,4 @@
+
 .nav-menu{
     position: fixed;
     z-index: 999;
@@ -8,11 +9,21 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 10px 0;
     }
     .logo{
-        width: 80px;
+        width: 100px;
+        text-align: center;
+        display: flex;
+        align-items: center;
         img{
-            width: 100%;
+            width: 70%;
+        }
+        span{
+            color: white;
+            font-size: 20px;
+            display: inline-block;
+            margin-right: 10px;
         }
     }
     ul{

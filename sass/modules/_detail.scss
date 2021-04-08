@@ -1,0 +1,45 @@
+
+#detail {
+    min-height       : 100vh;
+    background-image : url(../../images/back2.jpg);
+    background-repeat: no-repeat;
+    background-size  : 100% 100%;
+    color: white;
+
+    .container {
+        min-height       : 100vh;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+    }
+
+    .content {
+        margin-right: 100px;
+
+        .title {
+            font-size: 24px;
+            margin   : 20px 0;
+        }
+
+        .body {
+            h3 {
+                font-size: 24px;
+            }
+
+            >div {
+                font-size  : 18px;
+                line-height: 1.8;
+            }
+        }
+    }
+
+    .img {
+        margin-top: 20px;
+        text-align: center;
+        font-size : 0;
+
+        img {
+            width: 700px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="./css/master.css">
+</head>
+<body>
+    <div id="detail">
+        <div class="back">
+            <a href="./gallery.html">Back<<</a>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="title">
+                    <h2>{{currentPortfolio.title}}</h2>
+                    <h3>{{currentPortfolio.title2}}</h3>
+                </div>
+                <div class="body">
+                    <h3>{{currentPortfolio.title3}}</h3>
+                    <div v-html="currentPortfolio.desc"></div>
+                </div>
+            </div>
+            <div class="img"><img :src="currentPortfolio.url2 ? currentPortfolio.url2 : currentPortfolio.url" alt=""></div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
+</body>
+</html>

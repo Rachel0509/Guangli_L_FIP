@@ -1,13 +1,54 @@
+
 * {
-    margin    : 0;
-    padding   : 0;
-    box-sizing: border-box;
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
     font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    min-width: 1200px;
 }
 
 .container {
     width : 1200px;
     margin: auto;
+}
+
+.web {
+    min-height       : 100vh;
+    background-image : url(../images/back2.jpg);
+    background-repeat: no-repeat;
+    background-size  : 100% 100%;
+    color            : white;
+
+    .container {
+        width: 800px;
+    }
+
+    h2 {
+        font-size    : 32px;
+        padding      : 60px 0 20px;
+        border-bottom: 2px solid red;
+    }
+
+    p {
+        line-height  : 2.8;
+        margin-bottom: 20px;
+    }
+}
+
+.back {
+    display    : block;
+    width      : 1200px;
+    margin     : auto;
+    padding-top: 60px;
+
+    a {
+        color      : #D4A2C8;
+        font-size  : 18px;
+        font-weight: bold;
+    }
 }
 
 .dialog-wrapper {
@@ -21,11 +62,11 @@
     font-size       : 0;
     white-space     : nowrap;
     overflow        : auto;
-    overflow: hidden;
-    display: none;
-    z-index: 999;
+    overflow        : hidden;
+    display         : none;
+    z-index         : 999;
 
-    &.visible{
+    &.visible {
         display: block;
     }
 
@@ -42,22 +83,50 @@
         text-align    : left;
         font-size     : 14px;
         white-space   : normal;
-        text-align: center;
+        text-align    : center;
 
-        img{
+        img {
             width: 60%;
         }
     }
-    .close{
-        position: fixed;
-        top: 0;
-        right: 0;
-        color: red;
+
+    .close {
+        position : fixed;
+        top      : 0;
+        right    : 0;
+        color    : red;
         font-size: 60px;
-        cursor: pointer;
+        cursor   : pointer;
     }
 }
 
-main{
+main {
     padding-top: 87px;
+}
+
+.hover-text {
+    position : relative;
+    font-size: 0;
+    overflow : hidden;
+
+    &:hover {
+        >div {
+            right: 0;
+            width: 100%;
+        }
+    }
+
+    >div {
+        position        : absolute;
+        top             : 0;
+        bottom          : 0;
+        right           : -999px;
+        transition      : all 1s ease-in-out;
+        background-color: rgba(255, 0, 0, 0.5);
+        color           : white;
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        font-size       : 30px;
+    }
 }

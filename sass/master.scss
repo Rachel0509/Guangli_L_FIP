@@ -1,12 +1,14 @@
-@import './modules/_var.less';
-@import './modules/_animation.less';
-@import './modules/_global.less';
-@import './modules/_navMenu.less';
-@import './modules/_footer.less';
-@import './modules/_index.less';
-@import './modules/_gallery.less';
-@import './modules/_contact.less';
-@import './modules/_error.less';
-@import './modules/_mediaqueries.less';
+//out: ../css/master.css
+@import './modules/_var';
+@import './modules/_animation';
+@import './modules/_global';
+@import './modules/_navMenu';
+@import './modules/_footer';
+@import './modules/_index';
+@import './modules/_gallery';
+@import './modules/_contact';
+@import './modules/_detail';
+@import './modules/_error';
+@import './modules/_mediaqueries';
 
 

@@ -1,47 +1,110 @@
-@media screen and (max-width: 768px){
-    .container{
-        width: auto;
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
     }
-    main{
+
+    main {
         padding: 87px 10px 0;
     }
-    #home{
-        main{
+
+    body{
+        min-width: auto;
+    }
+
+    .nav-menu {
+        .logo {
+            display: none;
+        }
+    }
+
+    #home {
+        main {
             padding: 0 10px;
         }
-        header{
-            .banner{
+
+        header {
+            .banner {
                 div {
-                    img{
+                    img {
                         width: 250px;
                     }
-                    a{
-                        line-height     : 30px;
-                        width           : 170px;
+
+                    a {
+                        line-height: 30px;
+                        width      : 170px;
                     }
-                  }
-    
-                  .item {
-                      font-size: 20px;
-                  }
-            
-                  .cubic {
-                   display: none;
-                  }
+                }
+
+                .item {
+                    font-size: 20px;
+                }
+
+                .cubic {
+                    display: none;
+                }
+            }
+        }
+
+        main {
+            .case-study {
+                div {
+                    flex-direction: column;
+                    align-items   : center;
+
+                    p {
+                        display: block;
+
+                        &:nth-child(1) {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
             }
         }
     }
 
-    #contact{
-        main{
+    #contact {
+        main {
             .left {
                 display: none;
             }
-    
+
+            .right {
+                .form {
+                    form {
+                        .name {
+                            display: block;
+                        }
+
+                        .form-item {
+                            input {
+                                width: 100%;
+
+                                &#email {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
             .skills {
-                .items{
+                .items {
                     flex-wrap: wrap;
                 }
+            }
+        }
+    }
+
+    #detail {
+        display: block;
+        padding: 0 20px;
+
+        .img {
+            img {
+                width: 100%;
             }
         }
     }

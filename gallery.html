@@ -11,7 +11,7 @@
         <header>
             <nav class="nav-menu container">
                 <div class="inner container">
-                    <div class="logo"><img src="./images/logo1.png" alt=""></div>
+                    <div class="logo"><img src="./images/Logo_L.png" alt=""><span>Guangli</span></div>
                     <ul>
                         <li><a href="./index.html">Home</a></li>
                         <li><a href="./gallery.html" class="active">Gallery</a></li>
@@ -25,11 +25,16 @@
                 <h2>Gallery</h2>
                 <p>By -- PS,AI,C4D</p>
             </div>
-            <div class="big-img">
-                <img :src="currentPortfolio" alt="">
-            </div>
             <div class="img-list">
-                <div class="item" v-for="(item,index) in portfolioImgs" :key="index" @click="showBigImg(item.url)"><img :src="item.url" alt="" ></div>
+                <div class="item hover-text" v-for="(item,index) in portfolioImgs" :key="index" @click="showBigImg(item)">
+                    <img :src="item.url" alt="" >
+                    <div>
+                        <div>
+                            <p>{{item.title}}</p>
+                            <p>{{item.title2}}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="detail">
                 <a href="./contact.html">Detail >></a>

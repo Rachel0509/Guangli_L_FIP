@@ -50,12 +50,27 @@ import Lightbox from './components/TheLightbox.js';
             },
             processSuccess(r) {
                 this.portfolioImgs = r;
-                this.currentPortfolio = this.portfolioImgs[0].url;
             },
-            showBigImg(url){
-                this.currentPortfolio = url;
+            showBigImg(item){
+                this.currentPortfolio = item;
+                localStorage.setItem('current_portfolio', JSON.stringify(this.currentPortfolio));
+                location.href = '/detail.html';
             }
         }
     }).$mount('#gallery');
+
+    let detail_vue = new Vue({
+        data: {
+            currentPortfolio: {}
+        },
+        created() {
+            this.init();
+        },
+        methods: {
+            init() {
+               this.currentPortfolio = JSON.parse(localStorage.getItem('current_portfolio'));
+            }
+        }
+    }).$mount('#detail');
 
 })();
